@@ -5,12 +5,12 @@ class TracksController < ApplicationController
   def index
     @tracks = Track.all
 
-    render json: @tracks
+    render json: @tracks.to_json(:include => :likes)
   end
 
   # GET /tracks/1
   def show
-    render json: @track
+    render json: @track.to_json(:include => { :comments => { :include => :user}})
   end
 
   # POST /tracks
@@ -46,6 +46,6 @@ class TracksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def track_params
-      params.require(:track).permit(:title, :artist, :url, :user_id, user_ids:[])
+      params.require(:track).permit(:title, :artist, :url, :user_id, like_ids:[])
     end
 end
