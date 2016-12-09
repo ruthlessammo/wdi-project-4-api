@@ -1,5 +1,6 @@
 class TracksController < ApplicationController
   before_action :set_track, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_user!, except: [:update, :create, :destroy]
 
   # GET /tracks
   def index
@@ -16,6 +17,7 @@ class TracksController < ApplicationController
   # POST /tracks
   def create
     @track = Track.new(track_params)
+    @track.user = current_user
 
     if @track.save
       render json: @track, status: :created, location: @track
@@ -35,7 +37,11 @@ class TracksController < ApplicationController
 
   # DELETE /tracks/1
   def destroy
-    @track.destroy
+    if @track.user == current_user || !@track.user
+      @track.destroy
+    else
+      render json: { errors: ["Unauthorized"] }, status: 401
+    end
   end
 
   private
