@@ -28,13 +28,17 @@ class TracksController < ApplicationController
 
   # PATCH/PUT /tracks/1
   def update
-    if @track.update(track_params)
-      render json: @track
+    if @track.user == current_user || !@track.user
+      if @track.update(track_params)
+        render json: @track
+      else
+        render json: @track.errors, status: :unprocessable_entity
+      end
     else
-      render json: @track.errors, status: :unprocessable_entity
+      render json: { errors: ["Unauthorized"] }, status: 401
     end
   end
-
+  
   # DELETE /tracks/1
   def destroy
     if @track.user == current_user || !@track.user
@@ -45,13 +49,13 @@ class TracksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_track
-      @track = Track.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_track
+    @track = Track.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def track_params
-      params.require(:track).permit(:title, :artist, :url, :user_id, like_ids:[])
-    end
+  # Only allow a trusted parameter "white list" through.
+  def track_params
+    params.require(:track).permit(:title, :artist, :url, :user_id, like_ids:[], )
+  end
 end
