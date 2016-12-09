@@ -1,5 +1,5 @@
 class TrackSerializer < ActiveModel::Serializer
-  attributes :id, :title, :artist, :url, :likes, :comments, :soundcloud_id
+  attributes :id, :title, :artist, :likes, :comments, :soundcloud_id, :embed_code
   has_one :user
   has_many :comments
 

@@ -92,22 +92,22 @@ puts "Created Users"
 Track.create!([{
   title: "Shook Ones pt II",
   artist: "Mobb Deep",
-  url: "https://soundcloud.com/acmo/mobb-deep-shook-ones-pt-1",
+  embed_code: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/18967639&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
   user_id: 2
   },{
   title: "Hypnotized",
   artist: "Frank Ekwa",
-  url: "https://soundcloud.com/frankekwa/frank-ekwa-hypnotized-freestyle",
+  embed_code: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/283315366&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
   user_id: 2
   },{
   title: "Jungle",
   artist: "Frank Ekwa",
-  url: "https://soundcloud.com/buzzworlofficial/frank-ekwa-ft-onjob-pros-jungle",
+  embed_code: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205299133&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
   user_id: 2
   },{
   title: "Sunflowers",
   artist: "The Deli",
-  url: "https://soundcloud.com/the-deli/unttigbhacwy",
+  embed_code: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/143067535&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
   user_id: 4
   }])
 
