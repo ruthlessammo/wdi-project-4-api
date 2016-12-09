@@ -5,12 +5,12 @@ class TracksController < ApplicationController
   def index
     @tracks = Track.all
 
-    render json: @tracks, includes: ['likes']
+    render json: @tracks, include: ['likes']
   end
 
   # GET /tracks/1
   def show
-    render json: @track, includes: ['comments', 'comments.user']
+    render json: @track, include: ['comments', 'comments.user']
   end
 
   # POST /tracks
