@@ -1,5 +1,5 @@
 class TrackSerializer < ActiveModel::Serializer
-  attributes :id, :title, :artist, :url, :likes, :comments
+  attributes :id, :title, :artist, :url, :likes, :comments, :soundcloud_id
   has_one :user
   has_many :comments
 
@@ -7,5 +7,5 @@ class TrackSerializer < ActiveModel::Serializer
     object.likes.length
   end
 
-  
+
 end

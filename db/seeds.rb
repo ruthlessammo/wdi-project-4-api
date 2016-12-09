@@ -92,7 +92,7 @@ puts "Created Users"
 Track.create!([{
   title: "Shook Ones pt II",
   artist: "Mobb Deep",
-  url: "https://www.youtube.com/watch?v=0NUX4tW5pps",
+  url: "https://soundcloud.com/acmo/mobb-deep-shook-ones-pt-1",
   user_id: 2
   },{
   title: "Hypnotized",
@@ -100,9 +100,9 @@ Track.create!([{
   url: "https://soundcloud.com/frankekwa/frank-ekwa-hypnotized-freestyle",
   user_id: 2
   },{
-  title: "Hypnotized",
+  title: "Jungle",
   artist: "Frank Ekwa",
-  url: "https://soundcloud.com/frankekwa/frank-ekwa-hypnotized-freestyle",
+  url: "https://soundcloud.com/buzzworlofficial/frank-ekwa-ft-onjob-pros-jungle",
   user_id: 2
   },{
   title: "Sunflowers",
