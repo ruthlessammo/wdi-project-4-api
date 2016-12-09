@@ -5,12 +5,12 @@ class TracksController < ApplicationController
   def index
     @tracks = Track.all
 
-    render json: @tracks.to_json(:include => :likes)
+    render json: @tracks, includes: ['likes']
   end
 
   # GET /tracks/1
   def show
-    render json: @track.to_json(:include => { :comments => { :include => :user}})
+    render json: @track, includes: ['comments', 'comments.user']
   end
 
   # POST /tracks
