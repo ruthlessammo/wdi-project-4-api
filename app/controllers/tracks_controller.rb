@@ -11,7 +11,7 @@ class TracksController < ApplicationController
 
   # GET /tracks/1
   def show
-    render json: @track, include: ['comments', 'comments.user']
+    render json: @track, include: ['comments', 'comments.user', 'likes']
   end
 
   # POST /tracks
