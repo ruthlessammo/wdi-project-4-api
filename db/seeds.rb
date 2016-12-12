@@ -14,12 +14,14 @@ User.create!([{
   username: "mickyginger",
   email: "mike.hayden@ga.co",
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  image: "https://avatars2.githubusercontent.com/u/3531085?v=3&s=400"
   },{
   username: "ruthlessammo",
   email: "williamhilton@email.com",
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  image: "http://i.imgur.com/9akkXBX.jpg"
   },{
   username: "moorehen",
   email: "olliemoore@gmail.com",
@@ -92,23 +94,23 @@ puts "Created Users"
 Track.create!([{
   title: "Shook Ones pt II",
   artist: "Mobb Deep",
-  embed_code: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/18967639&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
+  soundcloud_id: "18967639",
   user_id: 2
   },{
   title: "Hypnotized",
   artist: "Frank Ekwa",
-  embed_code: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/283315366&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
+  soundcloud_id: "283315366",
   user_id: 2
   },{
   title: "Jungle",
   artist: "Frank Ekwa",
-  embed_code: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205299133&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
+  soundcloud_id: "205299133",
   user_id: 2
   },{
   title: "Sunflowers",
   artist: "The Deli",
-  embed_code: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/143067535&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
-  user_id: 4
+  soundcloud_id: "143067535",
+  user_id: 1
   }])
 
 puts "Created Tracks"

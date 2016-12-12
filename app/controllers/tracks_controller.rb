@@ -17,13 +17,15 @@ class TracksController < ApplicationController
   # POST /tracks
   def create
 
-    if track_params[:embed_code]
-      track_params[:embed_code].match(%r{tracks/([0-9]+)})
-      track_params[:soundcloud_id] = $1
-      track_params.delete(:embed_code)
+    track_data = track_params
+
+    if track_data[:embed_code]
+      track_data[:embed_code].match(%r{tracks/([0-9]+)})
+      track_data[:soundcloud_id] = $1
+      track_data.delete(:embed_code)
     end
 
-    @track = Track.new(track_params)
+    @track = Track.new(track_data)
     @track.user = current_user
 
     if @track.save
