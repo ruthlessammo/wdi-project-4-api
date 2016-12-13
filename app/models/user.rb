@@ -6,4 +6,10 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :password_confirmation, presence: true, on: :create
+
+  def likes_received
+    tracks.reduce(0) do |memo, track|
+      memo + track.likes.count
+    end
+  end
 end

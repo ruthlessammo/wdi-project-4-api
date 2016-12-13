@@ -3,9 +3,4 @@ class TrackSerializer < ActiveModel::Serializer
   has_one :user
   has_many :comments
 
-  def likes
-    object.likes.length
-  end
-
-
 end
