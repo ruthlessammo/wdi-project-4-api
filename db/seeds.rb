@@ -111,10 +111,10 @@ User.create!([{
 puts "Created Users"
 
 Track.create!([{
-  title: "Shook Ones pt II",
-  artist: "Mobb Deep",
-  soundcloud_id: "18967639",
-  user_id: 6
+  title: "A1",
+  artist: "Nicolas Jaar",
+  soundcloud_id: "28376146",
+  user_id: 2
   },{
   title: "Hypnotized",
   artist: "Frank Ekwa",
@@ -154,7 +154,7 @@ Track.create!([{
   title: "Where BK at?",
   artist: "Biggie/Metro Boomin",
   soundcloud_id: "251127351",
-  user_id: 2
+  user_id: 1
   },{
   title: "007",
   artist: "The Mouse Outfit",
@@ -184,7 +184,7 @@ Track.create!([{
   title: "Full Circle",
   artist: "George Fitzgerald",
   soundcloud_id: "192980593",
-  user_id: 1
+  user_id: 7
   },{
   title: "Jungle",
   artist: "Frank Ekwa",
